@@ -28,3 +28,16 @@ var pageName = '1'; // union - operator to combine data type.
 var errorMessage = null;
 var user3 = null;
 var someProp;
+// any never void unknown in Typescript 
+//when we don't return anything it's void.
+//Void is a set of undefined and null
+var doSomething = function () {
+    console.log('doSomething');
+};
+var foo = undefined;
+// foo = 'foo'
+//use void to say we don't return something from a function.
+//any type in TS, don't Recommend to use 
+//any type turns off TS checks
+var foo2 = 'foo';
+console.log(foo2.bar());

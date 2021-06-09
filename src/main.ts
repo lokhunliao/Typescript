@@ -61,3 +61,20 @@ let errorMessage: string | null = null;
 let user3: UserInterface2 | null = null;
 
 let someProp: string | number | null | undefined | string[] | object
+
+
+// any never void unknown in Typescript 
+//when we don't return anything it's void.
+//Void is a set of undefined and null
+const doSomething = (): void => {
+    console.log('doSomething');
+}
+let foo: void = undefined;
+// foo = 'foo'
+//use void to say we don't return something from a function.
+
+//any type in TS, don't Recommend to use 
+//any type turns off TS checks
+let foo2: any = 'foo'
+console.log(foo2.bar());
+
