@@ -160,3 +160,27 @@ const user4 = new User3('luke','liao')
 console.log(user4.getFullName());
 // console.log(user4.firstName); error
 console.log(User3.maxAge); // user4 don't have maxAge 
+
+
+//Generics interface and functions 
+//big T is a default name for generic 
+//All generic data type are written inside "<>"
+const addId = <T extends object > (obj: T) => { // if we don't provide argument type - it will be any 
+    const id = Math.random().toString(16)
+    return {...obj, id}
+};
+
+interface UserInterface4 {
+    name: string
+}
+
+const user5: UserInterface4 = {
+    name: 'jack',
+};
+
+const result = addId<UserInterface4>(user5);
+console.log("result", result);
+
+//generic with interfaces
+
+
