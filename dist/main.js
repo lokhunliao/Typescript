@@ -41,3 +41,8 @@ var foo = undefined;
 //any type turns off TS checks
 var foo2 = 'foo';
 console.log(foo2.bar());
+//never type in TS, 
+//function with never can't be executed to the end  
+var doSomething2 = function () {
+    throw 'never';
+};

@@ -78,3 +78,8 @@ let foo: void = undefined;
 let foo2: any = 'foo'
 console.log(foo2.bar());
 
+//never type in TS, 
+//function with never can't be executed to the end  
+const doSomething2 = (): never => {
+    throw 'never';
+};
