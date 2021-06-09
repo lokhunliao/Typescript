@@ -20,3 +20,11 @@ var user2 = {
     }
 };
 console.log(user.getMessage());
+var PopularTags = ['dragon', 'coffee'];
+var dragonsTag = 'dragon';
+var username = 'Alex';
+var pageName = '1'; // union - operator to combine data type.
+// the value can be Different types string or number 
+var errorMessage = null;
+var user3 = null;
+var someProp;

@@ -11,7 +11,8 @@ console.log(getFullName('luke', 'liao'));
 
 
 //object
-interface UserInterface { // use IUser or userInterface to Specify, not a class 
+// use IUser or userInterface to Specify, not a class 
+interface UserInterface { 
     name: string;
     // age: number;
     //if the age is not required. we can use:
@@ -35,3 +36,28 @@ const user2: UserInterface = {
 }
 
 console.log(user.getMessage());
+
+
+//union operator in Typescript
+type ID = string;
+type PopularTag = string;
+type MaybePopularTag = PopularTag | null //or = string | null
+interface UserInterface2 {
+    name: ID,
+    surname: string
+} 
+
+const PopularTags: PopularTag[] = ['dragon', 'coffee'];
+
+const dragonsTag : MaybePopularTag = 'dragon'
+
+let username: string = 'Alex';
+
+let pageName: string | number = '1'; // union - operator to combine data type.
+// the value can be Different types string or number 
+
+let errorMessage: string | null = null;
+
+let user3: UserInterface2 | null = null;
+
+let someProp: string | number | null | undefined | string[] | object
