@@ -150,3 +150,26 @@ console.log("result", result);
 var updatedArray = append('baz', ['baz', 'foo']);
 var searchStr = 'foo';
 var hasSearchString = any(function (el) { return el.includes(searchStr); }, ['fooo', 'bar', 'baz']); // return a boolean value, true or false 
+//Enums
+var statuses = {
+    notStarted: 0,
+    inProgress: 1,
+    done: 2
+};
+console.log(statuses.inProgress); //return 1
+var Status;
+(function (Status) {
+    Status[Status["NotStarted"] = 0] = "NotStarted";
+    Status[Status["InProgress"] = 1] = "InProgress";
+    Status[Status["Done"] = 2] = "Done";
+})(Status || (Status = {}));
+console.log(Status.InProgress);
+// it return 1,
+//bc the values are incremented from zero. 
+var Status2;
+(function (Status2) {
+    Status2["NotStarted"] = "notstarted";
+    Status2["InProgress"] = "inprogress";
+    Status2["Done"] = "done";
+})(Status2 || (Status2 = {}));
+//thats how we assign the values. 

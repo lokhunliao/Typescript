@@ -203,3 +203,31 @@ function any<T>(fn:(a:T) => boolean,list: readonly T[]):boolean;
 
 const searchStr = 'foo';
 const hasSearchString = any<string>((el:string)=> el.includes(searchStr),['fooo','bar','baz']); // return a boolean value, true or false 
+
+//Enums
+const statuses = {
+    notStarted: 0,
+    inProgress: 1,
+    done: 2
+};
+
+console.log(statuses.inProgress); //return 1
+
+enum Status {
+    NotStarted,
+    InProgress,
+    Done
+}
+
+console.log(Status.InProgress); 
+// it return 1,
+//bc the values are incremented from zero. 
+
+enum Status2 {
+    NotStarted = 'notstarted',
+    InProgress = 'inprogress', 
+    Done = 'done'
+}
+
+//thats how we assign the values. 
+
