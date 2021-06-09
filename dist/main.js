@@ -57,3 +57,11 @@ var pageNumber = '1';
 var numberPageNumber = pageName;
 console.log(vAny.foo());
 // console.log(vUnknown.foo());
+//ts working with DOM
+var someElement = document.querySelector('.foo');
+console.log('someElement', someElement.value);
+var someElement2 = document.querySelector('.foo');
+someElement.addEventListener('blur', function (event) {
+    var target = event.target;
+    console.log('event', target.value);
+});
