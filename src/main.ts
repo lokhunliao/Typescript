@@ -111,4 +111,52 @@ someElement.addEventListener('blur', (event) => {
     console.log('event', target.value);
 })
 
+//ts with classes
+// public y Default 
+//private  means only Assemble inside the class.
 
+interface UserInterface3 {
+    getFullName(): string;
+}
+class User3 implements UserInterface3 {
+    // protected firstName: string
+    firstName: string
+    private lastName: string
+    readonly unchangableName: string
+    static readonly maxAge = 50
+
+    constructor(firstName: string, lastName: string){
+        this.firstName = firstName,
+        this.lastName = lastName
+        this.unchangableName = firstName;
+    }
+
+    changeUnchangableName(): void {
+        // this.unchangableName = 'foo' 
+    }
+
+    getFullName(): string{
+        return this.firstName + ' ' + this.lastName
+    }
+}
+
+class Admin extends User3 {
+    private editor: string
+
+    setEditor(editor: string): void {
+        this.editor = editor
+    }
+
+    getEditor(): string {
+        return this.editor
+    }
+}
+
+const admin = new Admin('liao', 'luke')
+console.log(admin.firstName);
+//only admin can access all the functions in Admin
+
+const user4 = new User3('luke','liao')
+console.log(user4.getFullName());
+// console.log(user4.firstName); error
+console.log(User3.maxAge); // user4 don't have maxAge 
