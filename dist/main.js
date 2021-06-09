@@ -52,5 +52,8 @@ var vUnknown = 10;
 var s1 = vAny;
 //we can't assign unknown directly in other type
 // let s2: string = vUnknown;
+var s2 = vUnknown;
+var pageNumber = '1';
+var numberPageNumber = pageName;
 console.log(vAny.foo());
 // console.log(vUnknown.foo());
