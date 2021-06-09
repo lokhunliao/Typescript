@@ -6,3 +6,17 @@ var getFullName = function (name, surname) {
 };
 //It is safer to define everything Explicitly  
 console.log(getFullName('luke', 'liao'));
+var user = {
+    name: 'Luke',
+    age: 20,
+    getMessage: function () {
+        return "hello" + name;
+    }
+};
+var user2 = {
+    name: 'jack',
+    getMessage: function () {
+        return "hello" + name;
+    }
+};
+console.log(user.getMessage());
