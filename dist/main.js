@@ -46,3 +46,11 @@ console.log(foo2.bar());
 var doSomething2 = function () {
     throw 'never';
 };
+// unknown
+var vAny = 10;
+var vUnknown = 10;
+var s1 = vAny;
+//we can't assign unknown directly in other type
+// let s2: string = vUnknown;
+console.log(vAny.foo());
+// console.log(vUnknown.foo());

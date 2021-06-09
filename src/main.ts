@@ -83,3 +83,15 @@ console.log(foo2.bar());
 const doSomething2 = (): never => {
     throw 'never';
 };
+
+// unknown
+let vAny: any = 10;
+let vUnknown: unknown = 10;
+
+let s1: string = vAny;
+//we can't assign unknown directly in other type
+// let s2: string = vUnknown;
+
+console.log(vAny.foo());
+// console.log(vUnknown.foo());
+
