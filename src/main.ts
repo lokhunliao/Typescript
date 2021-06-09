@@ -170,12 +170,25 @@ const addId = <T extends object > (obj: T) => { // if we don't provide argument 
     return {...obj, id}
 };
 
-interface UserInterface4 {
-    name: string
+interface UserInterface4<T, V> {
+    name: string,
+    data: T,
+    meta: V
 }
 
-const user5: UserInterface4 = {
+// "<T>" or "<V>" means that we can provide different data types.
+
+const user5: UserInterface4<{meta: string}, string> = {
     name: 'jack',
+    data: {
+        meta: 'foo'
+    },
+    meta: 'bar'
+};
+
+const user6: UserInterface4<string[]> = {
+    name: 'jack',
+    data: ['foo','bar','baz']
 };
 
 const result = addId<UserInterface4>(user5);
@@ -183,4 +196,10 @@ console.log("result", result);
 
 //generic with interfaces
 
+function append<T>(el:T, list readonly T[]): T[];
+const updatedArray = append<string>('baz',['baz','foo']);
 
+function any<T>(fn:(a:T) => boolean,list: readonly T[]):boolean;
+
+const searchStr = 'foo';
+const hasSearchString = any<string>((el:string)=> el.includes(searchStr),['fooo','bar','baz']); // return a boolean value, true or false 

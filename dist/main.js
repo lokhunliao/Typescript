@@ -133,9 +133,20 @@ var addId = function (obj) {
     var id = Math.random().toString(16);
     return __assign(__assign({}, obj), { id: id });
 };
+// "<T>" or "<V>" means that we can provide different data types.
 var user5 = {
-    name: 'jack'
+    name: 'jack',
+    data: {
+        meta: 'foo'
+    },
+    meta: 'bar'
+};
+var user6 = {
+    name: 'jack',
+    data: ['foo', 'bar', 'baz']
 };
 var result = addId(user5);
 console.log("result", result);
-//generic with interfaces
+var updatedArray = append('baz', ['baz', 'foo']);
+var searchStr = 'foo';
+var hasSearchString = any(function (el) { return el.includes(searchStr); }, ['fooo', 'bar', 'baz']); // return a boolean value, true or false 
