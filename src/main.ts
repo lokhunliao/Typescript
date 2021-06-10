@@ -236,3 +236,22 @@ interface Task {
     id: string,
     status: StatusEnum;
 }
+
+//tuples
+const person : {
+    name: string;
+    age: number;
+    hobbies: string[];
+    role: [number, string]; 
+    //tuple, tells ts, i want a special array with exactly two elements
+    //the first is a number, the second is a string
+} = {
+    name: 'max',
+    age: 20,
+    hobbies: ['sports', 'coding'],
+    role: [2, 'author']
+}
+person.role.push('admin')
+console.log(person.role);
+
+

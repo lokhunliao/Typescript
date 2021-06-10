@@ -175,3 +175,12 @@ var StatusEnum;
     StatusEnum["InProgress"] = "inprogress";
     StatusEnum["Done"] = "done";
 })(StatusEnum || (StatusEnum = {}));
+//tuples
+var person = {
+    name: 'max',
+    age: 20,
+    hobbies: ['sports', 'coding'],
+    role: [2, 'author']
+};
+person.role.push('admin');
+console.log(person.role);
