@@ -187,3 +187,21 @@ person.role.push('admin');
 console.log(person.role);
 function combine(input1, input2) {
 }
+//function type
+function add(n1, n2) {
+    return n1 + n2;
+}
+function printResult(num) {
+    console.log('result: ' + num);
+}
+printResult(add(5, 12));
+var combineValues;
+combineValues = add;
+// combineValues = printResult;  // error
+function addAndHandle(n1, n2, cd) {
+    var result = n1 + n2;
+    cd(result);
+}
+addAndHandle(3, 4, function (result) {
+    console.log(result);
+}); // 7
