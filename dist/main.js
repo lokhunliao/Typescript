@@ -154,6 +154,7 @@ var user5 = {
 // const searchStr = 'foo';
 // const hasSearchString = any<string>((el:string)=> el.includes(searchStr),['fooo','bar','baz']); // return a boolean value, true or false 
 //Enums
+//automatically enumerated global constant identifiers 
 var statuses = {
     notStarted: 0,
     inProgress: 1,
@@ -184,3 +185,5 @@ var person = {
 };
 person.role.push('admin');
 console.log(person.role);
+function combine(input1, input2) {
+}

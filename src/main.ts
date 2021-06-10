@@ -205,6 +205,7 @@ const user5: UserInterface4<{meta: string}, string> = {
 // const hasSearchString = any<string>((el:string)=> el.includes(searchStr),['fooo','bar','baz']); // return a boolean value, true or false 
 
 //Enums
+//automatically enumerated global constant identifiers 
 const statuses = {
     notStarted: 0,
     inProgress: 1,
@@ -255,3 +256,12 @@ person.role.push('admin')
 console.log(person.role);
 
 
+//type
+type Combinable = number | string;
+
+function combine(
+    input1: Combinable,
+    input2: Combinable,
+){
+    
+}
