@@ -205,3 +205,8 @@ function addAndHandle(n1, n2, cd) {
 addAndHandle(3, 4, function (result) {
     console.log(result);
 }); // 7
+//never
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
+}
+generateError('An error occurred', 500);

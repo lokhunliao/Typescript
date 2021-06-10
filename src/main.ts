@@ -290,3 +290,10 @@ function addAndHandle(n1: number, n2: number, cd: (num: number)=> void ){
 addAndHandle(3, 4, (result)=> {
     console.log(result);
 }) // 7
+
+//never
+function generateError(message: string, code: number): never {
+    throw { message: message, errorCode: code};
+}
+
+generateError('An error occurred', 500);
