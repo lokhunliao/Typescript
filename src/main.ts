@@ -186,23 +186,23 @@ const user5: UserInterface4<{meta: string}, string> = {
     meta: 'bar'
 };
 
-const user6: UserInterface4<string[]> = {
-    name: 'jack',
-    data: ['foo','bar','baz']
-};
+// const user6: UserInterface4<string[]> = {
+//     name: 'jack',
+//     data: ['foo','bar','baz']
+// };
 
-const result = addId<UserInterface4>(user5);
-console.log("result", result);
+// const result = addId<UserInterface4>(user5);
+// console.log("result", result);
 
 //generic with interfaces
 
-function append<T>(el:T, list readonly T[]): T[];
-const updatedArray = append<string>('baz',['baz','foo']);
+// function append<T>(el:T, list readonly T[]): T[];
+// const updatedArray = append<string>('baz',['baz','foo']);
 
-function any<T>(fn:(a:T) => boolean,list: readonly T[]):boolean;
+// function any<T>(fn:(a:T) => boolean,list: readonly T[]):boolean;
 
-const searchStr = 'foo';
-const hasSearchString = any<string>((el:string)=> el.includes(searchStr),['fooo','bar','baz']); // return a boolean value, true or false 
+// const searchStr = 'foo';
+// const hasSearchString = any<string>((el:string)=> el.includes(searchStr),['fooo','bar','baz']); // return a boolean value, true or false 
 
 //Enums
 const statuses = {
@@ -223,7 +223,7 @@ console.log(Status.InProgress);
 // it return 1,
 //bc the values are incremented from zero. 
 
-enum Status2 {
+enum StatusEnum {
     NotStarted = 'notstarted',
     InProgress = 'inprogress', 
     Done = 'done'
@@ -231,3 +231,8 @@ enum Status2 {
 
 //thats how we assign the values. 
 
+//enum with interfaces
+interface Task {
+    id: string,
+    status: StatusEnum;
+}

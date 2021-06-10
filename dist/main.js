@@ -141,15 +141,18 @@ var user5 = {
     },
     meta: 'bar'
 };
-var user6 = {
-    name: 'jack',
-    data: ['foo', 'bar', 'baz']
-};
-var result = addId(user5);
-console.log("result", result);
-var updatedArray = append('baz', ['baz', 'foo']);
-var searchStr = 'foo';
-var hasSearchString = any(function (el) { return el.includes(searchStr); }, ['fooo', 'bar', 'baz']); // return a boolean value, true or false 
+// const user6: UserInterface4<string[]> = {
+//     name: 'jack',
+//     data: ['foo','bar','baz']
+// };
+// const result = addId<UserInterface4>(user5);
+// console.log("result", result);
+//generic with interfaces
+// function append<T>(el:T, list readonly T[]): T[];
+// const updatedArray = append<string>('baz',['baz','foo']);
+// function any<T>(fn:(a:T) => boolean,list: readonly T[]):boolean;
+// const searchStr = 'foo';
+// const hasSearchString = any<string>((el:string)=> el.includes(searchStr),['fooo','bar','baz']); // return a boolean value, true or false 
 //Enums
 var statuses = {
     notStarted: 0,
@@ -166,10 +169,9 @@ var Status;
 console.log(Status.InProgress);
 // it return 1,
 //bc the values are incremented from zero. 
-var Status2;
-(function (Status2) {
-    Status2["NotStarted"] = "notstarted";
-    Status2["InProgress"] = "inprogress";
-    Status2["Done"] = "done";
-})(Status2 || (Status2 = {}));
-//thats how we assign the values. 
+var StatusEnum;
+(function (StatusEnum) {
+    StatusEnum["NotStarted"] = "notstarted";
+    StatusEnum["InProgress"] = "inprogress";
+    StatusEnum["Done"] = "done";
+})(StatusEnum || (StatusEnum = {}));
