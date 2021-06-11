@@ -1,6 +1,9 @@
 {
     "compilerOptions": {
+        // "target": "ES6", 
         "rootDir": "./src",
-        "outDir": "./dist"
+        "outDir": "./dist",
+        "removeComments": true
+        //remove the comments in js files 
     }
 }
